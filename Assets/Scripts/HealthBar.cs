@@ -5,10 +5,8 @@ public class HealthBar : HealthView
 {
     [SerializeField] private Slider _slider;
 
-    private float _percent = 0.01f;
-
-    public override void DrawHealth(float health)
+    public override void DrawHealth(float currentHealth, float maxHealth)
     {
-        _slider.value = health * _percent;
+        _slider.value = currentHealth / maxHealth;
     }
 }

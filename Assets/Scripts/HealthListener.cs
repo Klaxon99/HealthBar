@@ -24,6 +24,6 @@ public class HealthListener : MonoBehaviour
 
     private void HandleChange(float health)
     {
-        _healthView.DrawHealth(health);
+        _healthView.DrawHealth(health, _health.MaxValue);
     }
 }
